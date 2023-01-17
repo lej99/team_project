@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* 슬라이드 */
+#gallery_wrap {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("img/background2.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#gallery_wrap .background {
+    width: 100%;
+    height: 350px;
+    z-index: 989;
+}
+
+#gallery_wrap .background.top {
+    position: absolute;
+    top: 0;
+    background: url("img/top.png") center no-repeat;
+    background-size: cover;
+}
+
+#gallery_wrap .background.bottom {
+    position: absolute;
+    bottom: 0;
+    background: url("img/top1.png") center no-repeat;
+    background-size: cover;
+}
+
+#gallery_wrap .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto 0;
+}
+
+#gallery_wrap .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 886px;
+    height: 467px;
+}
+
+#gallery_wrap .swiper-slide img {
+    display: block;
+    width: 100%;
+}
