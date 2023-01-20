@@ -7,8 +7,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url('img/loading_background.jpg') center no-repeat;
+    background: url('img/loading_background.jpg') center fixed no-repeat;
     background-size: cover;
+    overflow: hidden;
     z-index: 999;
 }
 
@@ -22,8 +23,8 @@
 }
 
 #fade_wrap .fade.one {
-    background: url('img/gallery.svg') center no-repeat;
-    background-size: cover;
+    background: url('img/gallery.svg') center fixed no-repeat;
+    background-size: contain;
 }
 
 /* 슬라이드 */
@@ -35,7 +36,6 @@
     background-size: cover;
     position: relative;
     display: flex;
-    justify-content: center;
 }
 
 #gallery_wrap .background {
@@ -75,4 +75,15 @@
 #gallery_wrap .swiper-slide img {
     display: block;
     width: 100%;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width:600px){
+    #gallery_wrap {
+        justify-content: center;
+    }
+
+    #gallery_wrap .background {
+        height: 200px;
+    }
 }
