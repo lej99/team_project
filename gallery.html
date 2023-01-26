@@ -18,6 +18,8 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -32,6 +34,7 @@
             <div class="menu_icon"><span class="sticks"></span></div>
         </nav>
         <ul class="header_menu">
+            <li><a href="#" id="home">Home</a></li>
             <li><a href="#" id="character">Character</a></li>
             <li><a href="#" id="production">Production </a></li>
             <li><a href="gallery.html" id="gallery">Gallery </a></li>
@@ -41,8 +44,9 @@
 
     <div id="gallery_wrap">
         <div class="background top"></div>
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
+
+        <!-- 600px 이상 Swiper -->
+        <div id="desk" class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="css/img/movie_image1.jpg" alt="img1">
@@ -122,33 +126,143 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+
+        <!-- 600px 미만 Swiper -->
+        <div id="mobile" class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image1.jpg" alt="img1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image2.jpg" alt="img2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image3.jpg" alt="img3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image4.jpg" alt="img4">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image5.jpg" alt="img5">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image6.jpg" alt="img6">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image7.jpg" alt="img7">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image8.jpg" alt="img8">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image9.jpg" alt="img9">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image10.jpg" alt="img10">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image11.jpg" alt="img11">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image12.jpg" alt="img12">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image13.jpg" alt="img13">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image14.jpg" alt="img14">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image15.jpg" alt="img15">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image16.jpg" alt="img16">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image17.jpg" alt="img17">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image18.jpg" alt="img18">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image19.jpg" alt="img19">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image20.jpg" alt="img20">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image21.jpg" alt="img21">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image22.jpg" alt="img22">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image23.jpg" alt="img23">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image24.jpg" alt="img24">
+                </div>
+                <div class="swiper-slide">
+                    <img src="css/img/movie_image25.jpg" alt="img25">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
         <div class="background bottom"></div>
     </div>
-    <!-- Initialize Swiper -->
+
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            loop : true,
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
+        // desk Initialize Swiper
+            var firstSwiper = new Swiper("#desk", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+
+            // mobile Initialize Swiper
+            var secondSwiper = new Swiper('#mobile', {
+                slidesPerView: 3,
+                direction: getDirection(),
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    resize: function () {
+                        swiper.changeDirection(getDirection());
+                    },
+                },
+            });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 600 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+
     </script>
 
     <footer>
         <nav>
             <p>
-                ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights Reserved.
+                ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights
+                Reserved.
             </p>
             <div class="menu_button">
                 <p class="close none">Close</p>
@@ -158,10 +272,14 @@
         <div class="footer_menu_wrap">
             <div class="follow">
                 <p>FOLLOW AVATAR</p>
-                <a href="https://www.facebook.com/Avatar/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/officialavatar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/avatar/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/officialavatar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/Avatar/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/officialavatar" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/avatar/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/officialavatar" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-youtube"></i></a>
             </div>
             <ul class="footer_menu">
                 <li><a href="#">Terms of Use</a></li>
@@ -173,7 +291,8 @@
                 <li><a href="#">Do Not Sell My Personal Information</a></li>
             </ul>
             <p>
-                ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights Reserved.
+                ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights
+                Reserved.
             </p>
         </div>
     </footer>

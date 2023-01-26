@@ -33,6 +33,7 @@
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url("img/background2.jpg");
+    background-position: center;
     background-size: cover;
     position: relative;
     display: flex;
@@ -66,10 +67,7 @@
 }
 
 #gallery_wrap .swiper-slide {
-    background-position: center;
-    background-size: cover;
     width: 50%;
-    height: 50%;
 }
 
 #gallery_wrap .swiper-slide img {
@@ -77,13 +75,39 @@
     width: 100%;
 }
 
+#mobile {
+    display: none;
+}
+
 /* 미디어쿼리 */
-@media screen and (max-width:600px){
-    #gallery_wrap {
-        justify-content: center;
+@media screen and (max-width:600px) {
+    #desk {
+        display: none;
     }
 
-    #gallery_wrap .background {
-        height: 200px;
+    #mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
+
+    #mobile .swiper-wrapper {
+        align-items: center;
+    }
+
+    #mobile .swiper-slide {
+        width: 80%;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+    }
+
 }
