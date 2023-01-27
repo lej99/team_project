@@ -36,7 +36,7 @@
         <ul class="header_menu">
             <li><a href="#" id="home">Home</a></li>
             <li><a href="#" id="character">Character</a></li>
-            <li><a href="#" id="production">Production </a></li>
+            <li><a href="production.html" id="production">Production </a></li>
             <li><a href="gallery.html" id="gallery">Gallery </a></li>
             <li><a href="#" id="goods">Goods</a></li>
         </ul>
@@ -243,7 +243,7 @@
                     prevEl: '.swiper-button-prev',
                 },
                 on: {
-                    resize: function () {
+                    resize: function (swiper) {
                         swiper.changeDirection(getDirection());
                     },
                 },
@@ -260,6 +260,7 @@
 
     <footer>
         <nav>
+            <div id="top_btn"><i class="fa-solid fa-arrow-up-long"></i></div>
             <p>
                 ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights
                 Reserved.

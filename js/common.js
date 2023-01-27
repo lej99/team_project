@@ -6,10 +6,14 @@ $(document).ready(function () {
     });
 
     $('.footer_menu_wrap').hide();
-    
+
     $(".menu_button").click(function () {
         $('.close').toggleClass("none")
         $('.open').toggleClass("none")
         $('.footer_menu_wrap').stop().slideToggle();
+    });
+
+    $("#top_btn").click(function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });

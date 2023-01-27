@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* 페이지 로딩 화면 */
+#fade_wrap {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('img/loading_background.jpg') center fixed no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#fade_wrap .fade {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#fade_wrap .fade.one {
+    background: url('img/production.svg') center fixed no-repeat;
+    background-size: contain;
+}
+
+#fade_wrap .fade.two {
+    background: url('img/logo_icon.svg') center fixed no-repeat, rgba(0, 0, 0, 1);
+    background-size: contain;
+}
+
+/* 프로덕션 */
+#production_wrap {
+    width: 100%;
+    height: 100vh;
+    background: url('img/loading_background.jpg') center fixed no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 50px 0;
+}
+
+#production_wrap .product_logo {
+    width: 33%;
+    height: 33%;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+#production_wrap .product_logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#production_wrap .product_logo a.century {
+    background: url('img/20th_logo.svg') center no-repeat;
+    background-size: contain;
+}
+
+#production_wrap .product_logo a.tsg {
+    background: url('img/tsg_logo.svg') center no-repeat;
+    background-size: contain;
+}
+
+#production_wrap .product_logo a.light {
+    background: url('img/light_logo.svg') center no-repeat;
+    background-size: contain;
+}

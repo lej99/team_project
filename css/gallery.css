@@ -27,6 +27,11 @@
     background-size: contain;
 }
 
+#fade_wrap .fade.two {
+    background: url('img/logo_icon.svg') center fixed no-repeat, rgba(0, 0, 0, 1);
+    background-size: contain;
+}
+
 /* 슬라이드 */
 #gallery_wrap {
     width: 100%;
@@ -100,14 +105,27 @@
         width: 80%;
     }
 
-    .swiper-button-next {
-        right: 20px;
+    #mobile .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        transform: rotate(-90deg);
+    }
+
+    #mobile .swiper-button-prev {
+        width: 30px;
+        height: 30px;
         transform: rotate(90deg);
     }
 
-    .swiper-button-prev {
-        left: 20px;
-        transform: rotate(90deg);
+    #mobile .swiper-button-next::after,
+    #mobile .swiper-button-prev::after {
+        content: '\2190';
+        font-size: 1.8rem;
+        color: #eee;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
     }
-
 }
