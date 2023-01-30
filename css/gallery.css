@@ -7,29 +7,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url('img/loading_background.jpg') center fixed no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    z-index: 999;
-}
-
-#fade_wrap .fade {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 1);
-}
-
-#fade_wrap .fade.one {
-    background: url('img/gallery.svg') center fixed no-repeat;
-    background-size: contain;
-}
-
-#fade_wrap .fade.two {
     background: url('img/logo_icon.svg') center fixed no-repeat, rgba(0, 0, 0, 1);
     background-size: contain;
+    z-index: 999;
 }
 
 /* 슬라이드 */

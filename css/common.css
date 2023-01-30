@@ -18,6 +18,10 @@
         url('font/bold/HeirofLightOTFBold.otf') format('opentype'); /* Mac */
 }
 
+body {
+    position: relative;
+}
+
 *,
 ul,
 ol,
@@ -201,8 +205,8 @@ footer nav #top_btn {
     width: 40px;
     height: 60px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: 15px;
     cursor: pointer;
     text-align: center;
 }
