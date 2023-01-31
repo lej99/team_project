@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVATAR | The Way of Water - Intro</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="css/img/favicon.ico" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        /* 페이지 로딩 화면 */
+        #fade_wrap {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url('css/img/logo_icon.svg') center fixed no-repeat, rgba(0, 0, 0, 1);
+            background-size: contain;
+            z-index: 999;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            background: url('css/img/loading_background.jpg') center fixed no-repeat;
+            background-size: cover;
+        }
+
+        #wrap .welcome {
+            width: 100%;
+            height: 100%;
+            background: url('css/img/welcome.svg') center fixed no-repeat;
+            background-size: contain;
+        }
+    </style>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/cb463ae356.js" crossorigin="anonymous"></script>
+    <!-- script -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
+    <script defer src="js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fade_wrap').animate({ width: 0 }, 650);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="fade_wrap"></div>
+
+    <header>
+        <nav>
+            <div class="header_logo"><a href="#"></a></div>
+            <div class="menu_icon"><span class="sticks"></span></div>
+        </nav>
+        <ul class="header_menu">
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="character">Character</a></li>
+            <li><a href="production.html" id="production">Production </a></li>
+            <li><a href="gallery.html" id="gallery">Gallery </a></li>
+            <li><a href="#" id="goods">Goods</a></li>
+        </ul>
+    </header>
+
+    <div id="wrap">
+        <div class="welcome"></div>
+    </div>
+
+    <footer>
+        <nav>
+            <div id="top_btn"><i class="fa-solid fa-arrow-up-long"></i></div>
+            <p>
+                ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights
+                Reserved.
+            </p>
+            <div class="menu_button">
+                <p class="close none">Close</p>
+                <p class="open">Credits</p>
+            </div>
+        </nav>
+        <div class="footer_menu_wrap">
+            <div class="follow">
+                <p>FOLLOW AVATAR</p>
+                <a href="https://www.facebook.com/Avatar/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/officialavatar" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/avatar/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/officialavatar" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+            <ul class="footer_menu">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Children's Online Privacy Policy</a></li>
+                <li><a href="#">Your California Privacy Rights</a></li>
+                <li><a href="#">Avatar at shopDisney</a></li>
+                <li><a href="#">Interest-Based Ads</a></li>
+                <li><a href="#">Do Not Sell My Personal Information</a></li>
+            </ul>
+            <p>
+                ©2022 20th Century Studios. JAMES CAMERON'S AVATAR is a trademark of 20th Century Studios. All Rights
+                Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
