@@ -12,6 +12,38 @@
     z-index: 999;
 }
 
+/* 이미지 모달 */
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 990;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.modal .close {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 30px;
+    color: #fff;
+}
+
 /* 슬라이드 */
 #gallery_wrap {
     width: 100%;
